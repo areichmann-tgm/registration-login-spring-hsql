@@ -1,6 +1,9 @@
 package com.hellokoding.auth.model;
 
+import org.hibernate.validator.constraints.Email;
+
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.util.Set;
 
 @Entity
@@ -22,11 +25,13 @@ public class User {
     public void setId(Long id) {
         this.id = id;
     }
-
+    @Email
+    @NotNull
     public String getUsername() {
         return username;
     }
-
+    @Email
+    @NotNull
     public void setUsername(String username) {
         this.username = username;
     }
@@ -65,4 +70,5 @@ public class User {
 
     public void setBenutzername(String benutzername) {
         this.benutzername = benutzername;
+    }
 }
