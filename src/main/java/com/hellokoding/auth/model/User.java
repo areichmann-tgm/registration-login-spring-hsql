@@ -11,6 +11,7 @@ public class User {
     private String password;
     private String passwordConfirm;
     private Set<Role> roles;
+    private String benutzername;
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -56,4 +57,12 @@ public class User {
     public void setRoles(Set<Role> roles) {
         this.roles = roles;
     }
+
+    public String getBenutzername() {
+        return benutzername;
+    }
+
+
+    public void setBenutzername(String benutzername) {
+        this.benutzername = benutzername;
 }
